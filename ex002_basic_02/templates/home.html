@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>'welcome to home'</h1>
+    <script>
+        async function testPost(){
+            let a = await fetch('/',{method:"POST"});
+            let b = await a.text();
+            console.log(b);
+        };
+        async function testPut(){
+            let a = await fetch('/',{method:"PUT"});
+            let b = await a.text();
+            console.log(b);
+        };
+        testPost();
+        testPut();
+    </script>
+</body>
+</html>

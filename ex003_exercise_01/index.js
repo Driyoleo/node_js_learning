@@ -81,11 +81,11 @@ if (!fs.existsSync(__dirname + `/${ext}`)) {                    // this checks t
     
     
     
-    4>
+4>
     
-    fs.mkdirSync(__dirname + `/${ext}`, { recusive: true })     // this will create a folder 
+fs.mkdirSync(__dirname + `/${ext}`, { recusive: true })     // this will create a folder 
     
-    - mkdirSync if given only one argument then it will take it as file name and as it is it will create a folder or file in the main directory
-    - to avoid this we give { recursive : true}
+- mkdirSync if given only one argument then it will take it as file name and as it is it will create a folder or file in the main directory
+- to avoid this we give { recursive : true}
     
 */

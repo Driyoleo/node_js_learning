@@ -1,0 +1,12 @@
+today we gonna learn about mongodb.
+
+it is database which store data in object form .MongoDB is a source-available, cross-platform, document-oriented database program. Classified as a NoSQL database product, MongoDB utilizes JSON-like documents with optional schemas. MongoDB is developed by MongoDB Inc. and current versions are licensed under the Server Side Public License.
+
+
+first we will learn how to do basic things in mongodb
+ways of adding and editing in mongodb
+1> normally through typing in in the document or by inserting in mongodb compass
+2> through console in mongodb compass
+3> thorugh vscode with mongodb extension
+
+but we can do all those things after connecting with the database 

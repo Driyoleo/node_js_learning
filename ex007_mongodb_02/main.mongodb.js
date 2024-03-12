@@ -6,8 +6,8 @@ use('dumy_01');
 
 // 2> select the collection of database in which you want to do work
 
-// var collec =  db.school;
-// console.log(collec);
+var collec =  db.school;
+console.log(collec);
 
 // // 3> now we can do all our CRUED operations on the collection inside our database
 
@@ -42,11 +42,11 @@ var stud = db.students;
 
 // c> reading data: we can get all the data from database like this
 
-// var data = db.students.find();
-// // console.log(data);
-// for (const item of data) {
-//     console.log(item)   
-// }
+var data = db.students.find();
+// console.log(data);
+for (const item of data) {
+    console.log(item)   
+}
 
 
 /* output :
@@ -142,9 +142,9 @@ var stud = db.students;
 
 // note : for updateone() we need to use atomic operator $set
 
-// db.students.updateOne({"class":"I"},{$set:{"total_strength":70}});
-// var class1 = db.students.find({"class":"I"});
-// console.log(class1);
+db.students.updateOne({"class":"I"},{$set:{"total_strength":70}});
+var class1 = db.students.find({"class":"I"});
+console.log(class1);
 
 /* output:
 {
@@ -161,12 +161,12 @@ var stud = db.students;
   }
 */
 
-// db.students.updateMany({},      // leave seletor empty to update all documents
-//     {
-//         $set:{
-//             "section":"A"
-//         }
-//     })
+db.students.updateMany({},      // leave seletor empty to update all documents
+    {
+        $set:{
+            "section":"A"
+        }
+    })
 
 
 // e> delete :

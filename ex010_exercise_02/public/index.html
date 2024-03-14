@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="post">
+            <label for="fname">name</label>
+            <input type="text" id="name" name="name" value="">
+            <label for="salary">salary</label>
+            <input type="text" id="sal" name="salary" value="">
+            <label for="city">city</label>
+            <input type="text" id="city" name="city" value="">
+            <label for="confirm">ismanger?</label>
+            <input type="radio" name="confirm" id="confirm1" value="true">
+            <label for="confirm1">true</label>
+            <input type="radio" name="confirm" id="confirm2" value="false">
+            <label for="confirm2">false</label>
+            <input type="submit" id="submit" value="send">
+        </form>
+    </div>
+</body>
+</html>
+
+<!-- 
+    1>
+    <input type="text" name="" id="" value="">
+    type : it define which type of input you want to take 
+    name :- it is important for radio cause .. when we have two radio of same name then only one can be marked and the value of that radio is send as the parameter
+    - and in parameter of post it become the key to the value in object form
+    id : it is set to uniquely target a particular input
+    value : it holds the value to be returned in the request
+    - if you don't give value then there will be no parameter send for it in post request
+    
+    2>
+    <form action="/" method="post">
+    action : defines on which site the form will be redirected and request will be send 
+    method : it defines which type of request you wnat to send to the server
+    
+-->
+

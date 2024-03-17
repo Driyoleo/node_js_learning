@@ -1,0 +1,5 @@
+1> npm create vite@latest
+2> open app folder terminal
+3> npm i
+4> npm run dev
+5> then do your works on app.jsx

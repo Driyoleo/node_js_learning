@@ -1,0 +1,23 @@
+In this we gonna know about react builtin hook usestate -
+
+- State lets a component “remember” information like user input. For example, a form component can use state to store the input value, while an
+  image gallery component can use state to store the selected image index.
+
+- useState is a hook that allows you to add state to a functional component. State is a way of storing and managing data within a component.
+  With useState , you can declare a state variable and a function to update that variable.
+  
+- syntax:
+    function <funnction name>() {
+      const [<variable>, <fuction name to update the value of variable>] = useState(<initial value>);
+      //....}
+
+    eg,
+      function ImageGallery() {
+          const [index, setIndex] = useState(0);
+          //..}
+
+    - here index is the state variable whose initial value is 0 
+    - setIndex is a function name variable by using it we can change the value of index
+    - usestate is the builtin hook which 
+
+

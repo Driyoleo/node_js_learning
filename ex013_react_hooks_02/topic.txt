@@ -1,0 +1,48 @@
+
+Effect Hooks :
+
+- Effects let a component connect to and synchronize with external systems. This includes dealing with network, browser DOM, animations, widgets
+  written using a different UI library, and other non-React code.
+
+- in simple language it's like a side effect which runs when a change occurs 
+
+- syntax:
+    useEffect(() => {
+        <first effect>
+        return () =>{
+           second effect
+        }
+    }, [<change>]);
+
+    note : 
+        - a particular effect is run only when the value of varibale in <change> changes
+        - you can mention multiple varibales in <change> 
+        - <first effect> is any type action you want to show in your page in that effect
+        - <second effect>
+
+- cases :
+    case 1 :
+        useEffect(()=>{
+            // effect code
+        });
+
+        - this effect will run on every render
+
+    case 2 : 
+        useEffect(()=>{
+            // effect code
+        },[]);
+        
+        - this effect will run only the first time when the code runs
+
+    case 3 : 
+        useEffect9(()=>{
+            effect code
+        },[count]);
+
+        - this effect will run when count value changes
+
+// to be continued ...... 
+
+
+    

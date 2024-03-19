@@ -14,5 +14,5 @@ const Navbar = () => {
     </div>
   )
 }
-React
 export default Navbar
+React

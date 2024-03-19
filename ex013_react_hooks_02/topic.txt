@@ -36,13 +36,24 @@ Effect Hooks :
         - this effect will run only the first time when the code runs
 
     case 3 : 
-        useEffect9(()=>{
-            effect code
+        useEffect(()=>{
+            // effect code
         },[count]);
 
         - this effect will run when count value changes
 
-// to be continued ...... 
+    case 4 : 
+        useEffect(()=>{
+            // effect code
+            return ()=>{
+                // ummount code
+            }
+        })
 
+        - this will return whenever the component which is on the page if unmmounted from the page 
+        
+extra note :
+        - due to strict mode on vite the code is run twice at first render of page to check the code... thus if there is any alert or something 
+          will run twice , but it is just for dev in main website it will not happen
 
     

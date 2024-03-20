@@ -1,0 +1,38 @@
+
+useRef() : 
+
+- useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+- also the value of can be used accross rendering
+
+- note :  if the value of ref is changing overtime then it should not be used in the DOM cause
+          it doesn't render the page and in strict mode of react it creats error
+
+- uses : 
+        - Referencing a value with a ref
+                - eg.
+                - first importing useRef,
+                                import { useState, useEffect, useRef } from 'react'
+
+                - then defining it on top level of function
+                                const a = useRef(0)         // initial value = 0 
+
+                - now changing it whenever we want only in the top level of function
+                                a.current=a.current + 1
+
+        - Manipulating the DOM with a ref
+                - eg.
+                - first importing useRef,
+                                import { useState, useEffect, useRef } from 'react'
+                
+                - then defining a variable useRef
+                                const btnref = useRef()
+                
+                - giving it the reference of the element we want to target
+                                <button ref={btnref}>
+
+                - modifying the element from top level as we want
+                                btnref.current.style.backgroundColor = "red"
+
+-  do the examples on your own to clear concept given on this site
+- https://react.dev/reference/react/useRef
+

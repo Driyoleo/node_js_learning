@@ -1,0 +1,42 @@
+
+You have to use an api and display the data in the form of a card under a container. All the data points returned by the API should be converted to a card Use this API: https: //jsonplaceholder.typicode.com/posts
+
+Hint: Create a state for the data which will be fetched using the Json Placeholder API Inside useEffect, use fetch to populate that state and then use map to render the cards from that state
+
+
+
+
+# how to setup tailwindcss in vite : 
+
+    1. npm install -D tailwindcss postcss autoprefixer
+    2. npx tailwindcss init -p
+    3. wirte in tailwindcss config :
+                /** @type {import('tailwindcss').Config} */
+                export default {
+                content: [
+                        "./index.html",
+                        "./src/**/*.{js,ts,jsx,tsx}",
+                    ],
+                theme: {
+                    extend: {},
+                    },
+                plugins: [],
+                }
+    4. wirte in src/index.css :
+                @tailwind base;
+                @tailwind components;
+                @tailwind utilities;
+    5. npm run dev
+    6. now start your work
+
+
+
+
+    # approach :
+
+    1. make a card components
+    2. insert it inside app.jsx
+    3. import json api
+    4. parse it into the card thorugh map
+    
+            

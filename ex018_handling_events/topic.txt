@@ -1,0 +1,32 @@
+handling events in react :
+
+- in javascript we have to do addeventlistner() but in react we can directly add events like
+- <button onClick={onclickhandle}> click me</button>
+- here onClick is the click event 
+- onclickhandle is just a function which will run if the button is clicked
+- similar to this many more events are there in react
+
+
+- if we are doing work with input :
+- here if we want to access the inputs of the user we can do this : 
+
+    - suppose we want a form for the input of name wiht first name and last name
+
+    - define a state variable:
+            - const [name , setname ] = useState({firstname : "" , lastname : ""})
+
+    - put input as : 
+            - <input type="text" name='firstname' value={name.firstname} onChange={onchangehandle} />
+              <input type="text" name='lastname' value={name.lastname} onChange={onchangehandle} />
+            - name attrbute for the key.
+            - value attribute for the value of that key
+
+    - to access the value we put onchange event 
+
+    - within which we use a function like onchangehandle here : 
+            - function onchangehandle(e){
+                    setname({...name ,[e.target.name] : e.target.value})
+                    console.log(name)
+                 }
+
+    - note : whatever we change it will be appears like event backward is our console.log value cause the setname function is async in nature that's why it console.log is run first then the setname statement runs

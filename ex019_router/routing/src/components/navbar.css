@@ -1,0 +1,30 @@
+nav{
+    display: flex;
+
+    align-items: center;
+    color: white;
+    background-color: black;
+    height: 90px;
+    padding-left: 50px;
+    gap: 30px;
+
+}
+*{
+    padding: 0;margin: 0;
+}
+nav li{
+    list-style-type: none;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+.red{
+    background: red;
+}

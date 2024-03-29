@@ -1,0 +1,2 @@
+- motive : we do routing to avoid the page to be roloaded multiple times
+

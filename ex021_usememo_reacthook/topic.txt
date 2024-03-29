@@ -1,0 +1,29 @@
+# note : whenever the any state changes the whole page rerenders.
+- this posses some problems of bug if there is any complex code on page 
+- to fix this we uses three main hooks are..:
+        - 1. usememo to memoise some set of results and prevent that set of code to be rerender again and again
+        - 2. usecallback , it in simple language freezes the any fucntion which may run multiple time uneccesarily
+
+# today we will see about the usememo hook :
+
+- useMemo is a React Hook that lets you cache the result of a calculation between re-renders.
+- const cachedValue = useMemo(calculateValue, dependencies)
+
+- e.g :
+
+-   const [count1, setCount1] = useState(0)
+    const [count2, setCount2] = useState(0)
+    const [cal, setcal] = useState(false)
+    const sum = useMemo(()=>{return count1 + count2},[cal] )
+
+    - here count1 and count2 are counters
+    - then cal is value 
+    - sum is the sum of count1 and count2
+    
+    - working : 
+        - const sum = useMemo(()=>{return count1 + count2},[cal] )
+        - on doing this we meant ..
+                    - until the value of cal changes 
+                    - this funtion will not run
+                    - ()=>{return count1 + count2}
+                    - and the new value of sum will not be counted 

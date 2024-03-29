@@ -1,0 +1,39 @@
+# there is common problem comes when we go to component separated code for a  app 
+- if we need a state in multiple component but if it is defined in app.jsx we cannot directly access it as usual
+- to use that state we have two ways
+
+- 1. by passing it through props :
+    - step 1 : pass it as props ..
+                     <Bton count={count} setCount={setCount}/> 
+    - step 2 : now use that in your component as prop : 
+                     <button onClick={()=>{prop.setCount(prop.count + 1)}}>
+                     count = {prop.count}
+                     </button>
+    - note : but if you have multiple component in tree like  structure than you have pass the prop in each and every component
+
+
+- 2. by using useContext : 
+    - step 1 :
+        - make context/context.js    .. note : it is js not jsx
+        - import createCountext from "react"
+        - create a context wiht initial value and export it as ,
+                            export const counterContext = createContext(0)
+    - step 2 : 
+        - open app.jsx 
+        - import { counterContext } from '../context/context'
+        - now close the set of part of your app with <counterContext.Provider><counterContext.Provider/> in which you want your state and pass the state in it as,
+                            <counterContext.Provider value={{count , setCount}}>
+                            ...
+                            <counterContext.Provider/> 
+    - step 3 :
+        - come to any component you want 
+        - import React, { useContext } from 'react'
+        - import { counterContext } from '../../context/context'  
+        - inside the function ,
+                           const value = useContext(counterContext)
+        - now use it as you want ,
+                            <button onClick={() => { value.setCount(value.count + 1) }}>
+                            count = {value.count}
+                            </button>        
+
+            

@@ -1,36 +1,33 @@
-# form handling in react :
-- this helps to do form validation very easy for us we don't have to spent much time and energy in it,
-- to setup it we have to do following things : 
+# topic learned : error handling in react form hook..
 
-~ step 1:
-    Installing React Hook Form only takes a single command and you're ready to roll.
-    by  :  npm install react-hook-form
+- after setting up our form we can set some parameters  or rules to accept value or doing validation we can say:
+- this we can do in a following way :
 
+~ step 1 : 
+        adding validation parameters for the input :
+        eg..    <input {...register("firstname" ,{required: {value : true , message: "this field is required"} , minLength : {value : 3 , message : "min length is 3"} , maxLength: {value : 15 , message : "max length is 15"}})} type="text" placeholder='firstname' />
+
+        - syntax : 
+            <input {...register( "<name>" , { parameter : { value : <value> , message : "< message if the input is not valid>" } } )}>
+        
+        - some common eg. of parameters.. 
+                        - maxLength
+                        - minLength
+                        - required
+                        - etc
 ~ step 2 : 
-    import {useForm} from "react-hook-form"
+        - accessing the error message as output and demanding correction from user
+        - most common way : 
+            {errors.<name> && <whatever you want to do if error comes>}
+        eg. {errors.firstname && <p>this field is required</p> }
 
-~ step 3 :
-    define this on the top level,
-        const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-        } = useForm()
+        - we can also pass the error to a function and do many required works as we need
 
-~ step 4 :
-    inside the form we need to write in this way 
-    
-      <input {...register("firstname")} type="text" placeholder='firstname' />
-      <input {...register("secondname")} type="text" placeholder='secondname' />
-      <input type="submit" value="submit" />
-
-      - we don't have to give value and other things 
-      - just do this {...register("firstname")}
-
-~ step 5 : 
-    then we have to define onSubmit like this ...
-    <form action='' onSubmit={handleSubmit((data)=>{console.log(data)})}>
-
-
-
+        eg. {errors.firstname && correction1(errors.firstname.message)}
+        ..
+        correction1 function : 
+                      function correction1(e){
+                            console.log(e)
+                            document.getElementById("fnm").innerText = `${e}`
+                            return true
+                        }

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+nav{
+  background-color: black;
+  padding: 30px;
+  color: white;
+}
+nav ul{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.logo{
+  margin-right: 20px;
+  font-size: x-large;
+}
+
+.content{
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+}

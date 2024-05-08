@@ -1,0 +1,9 @@
+here i am gonna learn about the file based routing of next js 
+- it reduces our additional work and keep our work as simple and possible with multi pages app
+- suppose if i want a pet store website and i want different pages of that ..
+- i can just simply for different pages i have to do :
+    1. create named(name of the page) new file inside app folder
+    2. create page.js and provide the html content inside it of that page
+    then.. it will be automatically visible on that route due to next js
+
+

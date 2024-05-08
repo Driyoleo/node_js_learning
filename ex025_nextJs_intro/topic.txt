@@ -1,0 +1,10 @@
+today i am just getting some basics of next js and an over view about how it's work....
+
+first , how to setup a next js app :
+
+1. open the terminal then write .. npx create-next-app@latest
+2. give yes to -- ESLint , Tailwind CSS , App Router
+3. after everything perfectly installed and files creation.. open terminal of the app
+4. write .. npm run dev
+
+next thing i will do on next ex.. cause to keep things neet and clean to understand ...

@@ -1,0 +1,6 @@
+Aim I : how to use tailwind CSS with next.js
+
+- it's quite easy .. just write tailwind CSS as we do , cause the setup part is already done during the installation of next.js
+- just we need to put yes on this .. "Would you like to use Tailwind CSS? ... No / Yes" which is asked before the installation 
+
+Aim II : create good looking any normal website using Tailwind CSS

@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* nav{
+  position: fixed;
+} */
+main{
+  display: grid;
+  grid-template-columns: 20% 60%;
+  gap: 30px;
+  justify-content: center;
+}
